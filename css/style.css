@@ -1,0 +1,80 @@
+@font-face {
+    font-family: "Roboto Black Italic";
+    src: url("/assets/fonts/Roboto-BlackItalic-webfont.woff");
+}
+
+@font-face {
+    font-family: "Roboto Bold Condensed Italic";
+    src: url("/assets/fonts/RobotoCondensed-BoldItalic-webfont.woff");
+}
+
+@font-face {
+    font-family: "Roboto Bold Italic";
+    src: url("/assets/fonts/Roboto-BoldItalic-webfont.woff");
+}
+
+html {
+    position: relative;
+    background: url("/assets/background.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;
+    text-rendering: optimizeLegibility;
+}
+
+footer {
+    display: none;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: #fff;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    margin: 5em auto auto auto;
+    color: #fff;
+}
+
+.logo {
+    font-family: "Roboto Bold Italic", Arial, Helvetica, sans-serif;
+    font-size: 3.4em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.main-text {
+    margin-top: 10em;
+    font-size: 1.85em;
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width: 810px) {
+
+    .logo {
+        text-align: center;
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+
+    .main-text {
+        margin-top: 4em;
+    }
+
+    html {
+        background-position: right;
+    }
+
+}
