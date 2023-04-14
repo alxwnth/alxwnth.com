@@ -42,35 +42,59 @@ a:hover {
 .container {
     max-width: 800px;
     width: 100%;
-    margin: 5em auto auto auto;
+    margin-top: 5em;
+    padding: 0 1em;
+    float: right;
     color: #fff;
 }
 
 .logo {
+    padding: 0 1em;
     font-family: "Roboto Bold Italic", Arial, Helvetica, sans-serif;
     font-size: 3.4em;
     text-transform: uppercase;
     letter-spacing: 1px;
+    z-index: 20;
+    position: relative;
+    color: #fff;
 }
 
 .main-text {
-    margin-top: 10em;
-    font-size: 1.85em;
+    margin-top: 11em;
+    font-size: 1.7em;
     text-transform: uppercase;
+    z-index: 20;
+    position: relative;
+    text-align: right;
 }
 
-@media only screen and (max-width: 810px) {
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: 10;
+    opacity: 35%;
+}
+
+@media only screen and (max-width: 836px) {
 
     .logo {
         text-align: center;
+        padding: 0;
     }
 
-}
-
-@media only screen and (max-width: 480px) {
+    .container {
+        margin-top: 1em;
+        padding: 0;
+    }
 
     .main-text {
-        margin-top: 4em;
+        margin-top: 1em;
+        padding: 0 1em;
+        text-align: center;
     }
 
     html {
@@ -78,3 +102,5 @@ a:hover {
     }
 
 }
+
+@media only screen and (max-width: 480px) {}
