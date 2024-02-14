@@ -1,0 +1,14 @@
+{
+  "name": "alxwnth.com",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "dev": "npx @11ty/eleventy --serve"
+  },
+  "author": "",
+  "license": "AGPL-3.0",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}
