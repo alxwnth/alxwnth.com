@@ -1,5 +1,10 @@
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("CourierNew.ttf");
   eleventyConfig.addPassthroughCopy("bundle.css");
-  eleventyConfig.addPassthroughCopy({ "favicon.ico": "/" });
+  eleventyConfig.addPassthroughCopy("favicon.ico");
+  return {
+    dir: {
+      output: "public",
+    },
+  };
 };

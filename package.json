@@ -8,7 +8,7 @@
   },
   "author": "",
   "license": "AGPL-3.0",
-  "devDependencies": {
+  "dependencies": {
     "@11ty/eleventy": "^2.0.1"
   }
 }

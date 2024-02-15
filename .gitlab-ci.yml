@@ -12,14 +12,14 @@ stages:
 test:
   stage: test
   script:
-    - npx @11ty/eleventy --input=. --output=public
+    - npm run build
   rules:
     - if: $CI_COMMIT_REF_NAME != $CI_DEFAULT_BRANCH
 
 pages:
   stage: pages
   script:
-    - npx @11ty/eleventy --input=. --output=public
+    - npm run build
 
   artifacts:
     paths:
