@@ -4,7 +4,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("favicon.ico");
   return {
     dir: {
-      output: "public",
+      output: "build",
     },
   };
 };
