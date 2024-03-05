@@ -1,7 +1,10 @@
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("CourierNew.ttf");
-  eleventyConfig.addPassthroughCopy("bundle.css");
-  eleventyConfig.addPassthroughCopy("favicon.ico");
+  eleventyConfig.addPassthroughCopy({
+    './CourierNew.ttf': 'CourierNew.ttf',
+    './bundle.css': 'bundle.css',
+    './favicon.ico': 'favicon.ico'
+  });
+  
   return {
     dir: {
       output: "build",
