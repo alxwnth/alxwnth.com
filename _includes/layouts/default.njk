@@ -1,0 +1,21 @@
+---
+title: alxwnth
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>{{ title }}</title>
+        {% set css %}
+        {% include "style.css" %}
+        {% endset %} <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+        <style>
+            {{css | cssmin | safe}}</style>
+    </head>
+    <body>
+        {{ content | safe }}
+        {% include "waves.njk" %}
+    </body>
+</html>

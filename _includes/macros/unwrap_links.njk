@@ -1,0 +1,5 @@
+{% macro unwrapLinks(links, isContact = false) %}
+    {% for link in links %}
+        <a href="{{ link.link }}" target="_blank" rel="noreferrer{{ " me" if isContact }}">{{ link.title }}</a>
+    {% endfor %}
+{% endmacro %}

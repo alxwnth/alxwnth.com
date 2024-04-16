@@ -1,0 +1,11 @@
+{% set contactLinks = [
+    {title: "email", link: "mailto:alxwnth@posteo.me"},
+    {title: "mastodon", link: "https://mstdn.social/@alxwnth"},
+    {title: "github", link: "https://github.com/alxwnth"}
+] %}
+
+<div class="contact">
+{% for link in contactLinks %}
+    <a href="{{link.link}}">{{ link.title }}</a>
+{% endfor %}
+</div>
