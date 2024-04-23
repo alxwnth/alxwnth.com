@@ -98,3 +98,17 @@ pre {
     letter-spacing: -0.5pt;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  body,
+  .about-block {
+    background-color: #222428;
+    color: #717e8b;
+  }
+  a {
+    color: #717e8b;
+  }
+  .about-block {
+    border-color: #717e8b;
+  }
+}
