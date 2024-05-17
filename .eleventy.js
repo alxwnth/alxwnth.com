@@ -16,7 +16,7 @@ module.exports = function (eleventyConfig) {
 
   return {
     dir: {
-      output: "build",
+      output: "_site",
     },
   };
 };
