@@ -1,0 +1,34 @@
+---
+layout: layouts/content.njk
+title: curriculum vitæ
+---
+
+{% from 'macros/unwrap_table.njk' import unwrapTable %}
+{% from 'data/cvContact.njk' import cvContact %}
+{% from 'data/education.njk' import education %}
+{% from 'data/workExperience.njk' import workExperience %}
+{% from 'data/activities.njk' import activities %}
+{% from 'data/certifications.njk' import certifications %}
+<time>
+    <p>Updated May 17, 2024.</p>
+</time>
+<section>
+    <h2>Contact information</h2>
+    {{ unwrapTable(cvContact, unwrapIntoRows) }}
+</section>
+<section>
+    <h2>Education</h2>
+    {{ unwrapTable(education, unwrapIntoRows) }}
+</section>
+<section>
+    <h2>Employment</h2>
+    {{ unwrapTable(workExperience) }}
+</section>
+<section>
+    <h2>Other activities</h2>
+    {{ unwrapTable(activities) }}
+</section>
+<section>
+    <h2>Certifications</h2>
+    {{ unwrapTable(certifications) }}
+</section>

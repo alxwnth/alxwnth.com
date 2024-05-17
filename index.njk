@@ -1,16 +1,18 @@
 ---
 layout: layouts/default.njk
+title: home
 ---
 
 {% from 'macros/unwrap_links.njk' import unwrapLinks %}
-{% from 'projects.njk' import projects %}
-{% from 'contact.njk' import contactLinks %}
-<div class="about-block">
-    <h1>alex@home:~$</h1>
-    <div class="projects">
-        {{ unwrapLinks(projects) }}
-    </div>
-    <div class="contact">
-        {{ unwrapLinks(contactLinks, true) }}
-    </div>
-</div>
+{% from 'data/navLinks.njk' import navLinks %}
+{% from 'data/contact.njk' import contactLinks %}
+<article>
+    <header class="card about-block">
+        <h1>alex@home:~$</h1>
+        {# <div class="vertical-stack">{{ unwrapLinks(projects) }}</div> #}
+        <nav>
+            <div class="vertical-stack">{{ unwrapLinks(navLinks) }}</div>
+        </nav>
+        <div class="horizontal-stack">{{ unwrapLinks(contactLinks) }}</div>
+    </header>
+</article>
