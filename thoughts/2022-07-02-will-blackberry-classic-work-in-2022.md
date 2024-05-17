@@ -1,11 +1,10 @@
 ---
 layout: "layouts/content.njk"
 title: "will blackberry classic work in 2022?"
-permalink: "/blackberry-in-2022"
 tags: posts
 ---
 
-![A BlackBerry Classic phone lying on the table, list of applications displayed on the screen.](img/blackberry.webp)
+![A BlackBerry Classic phone lying on the table, list of applications displayed on the screen.](/img/blackberry.webp)
 
 > Note: This post hasn't been updated since November 2022, some information may be outdated.
 
