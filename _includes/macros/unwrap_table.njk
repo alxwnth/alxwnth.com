@@ -1,17 +1,17 @@
 {% macro unwrapTable(rows) %}
     <table class="cv-table">
         <colgroup>
-            <col class="cv-table-spec">
-        </col>
-        <col class="cv-table-content">
-    </col>
-</colgroup>
-<tbody>
-    {% for row in rows %}
-        <tr>
-            {% for data in row %}<td>{{ data | safe }}</td>{% endfor %}
-        </tr>
-    {% endfor %}
-</tbody>
-</table>
+            <col class="cv-table-spec"></col>
+            <col class="cv-table-content"></col>
+        </colgroup>
+        <tbody>
+            {% for row in rows %}
+                <tr>
+                    {% for data in row %}
+                        <td>{{ data | safe }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 {% endmacro %}

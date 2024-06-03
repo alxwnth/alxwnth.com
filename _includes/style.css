@@ -54,6 +54,10 @@ img {
   outline: 1px solid black;
 }
 
+a {
+  color: black;
+}
+
 .cv-table-spec {
   width: 17ex;
 }
