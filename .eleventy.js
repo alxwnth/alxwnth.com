@@ -7,6 +7,8 @@ module.exports = function (eleventyConfig) {
   });
   eleventyConfig.addPassthroughCopy({
     "./assets/CourierNew.ttf": "CourierNew.ttf",
+    "./assets/LiberationSerif-Regular.ttf": "LiberationSerif-Regular.ttf",
+    "./assets/LiberationSerif-Bold.ttf": "LiberationSerif-Bold.ttf",
     "./assets/favicon.ico": "favicon.ico",
   });
   eleventyConfig.addPassthroughCopy("img");

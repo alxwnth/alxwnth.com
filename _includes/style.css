@@ -1,10 +1,26 @@
 @font-face {
-  font-family: "Courier";
-  src: url("CourierNew.ttf") format("truetype");
+  font-family: "Courier New";
+  src: url("/CourierNew.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Liberation Serif";
+  src: url("/LiberationSerif-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Liberation Serif";
+  src: url("/LiberationSerif-Bold.ttf") format("truetype");
+  font-weight: bold;
 }
 
 * {
-  font-family: serif;
+  font-family: "Liberation Serif", serif;
+}
+
+p, table, a {
+  font-size: 18px;
 }
 
 h1 {
@@ -52,6 +68,10 @@ img {
   /* width: 115%; */
   /* max-width: 775px; */
   outline: 1px solid black;
+}
+
+a > img {
+  outline: none;
 }
 
 a {
