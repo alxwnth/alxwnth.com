@@ -4,7 +4,7 @@ title: "will blackberry classic work in 2022?"
 tags: posts
 ---
 
-![A BlackBerry Classic phone lying on the table, list of applications displayed on the screen.](/img/blackberry.webp)
+![A BlackBerry Classic phone lying on the table, list of applications displayed on the screen.](/img/blackberry.jpg)
 
 > Note: This post hasn't been updated since November 2022, some information may be outdated.
 
