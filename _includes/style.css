@@ -19,7 +19,9 @@
   font-family: "Liberation Serif", serif;
 }
 
-p, table, a {
+p,
+table,
+a {
   font-size: 18px;
 }
 
