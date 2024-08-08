@@ -1,6 +1,6 @@
 {
   "[njk]": {
-    "editor.defaultFormatter": "eseom.nunjucks-template"
+    "editor.defaultFormatter": "monosans.djlint"
   },
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
