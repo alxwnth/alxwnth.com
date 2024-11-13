@@ -1,0 +1,27 @@
+---
+import Clock from "./Clock.svelte";
+---
+
+<div class="menu">
+  <a class="button" href="/">Start</a>
+  <Clock client:only="svelte" />
+</div>
+
+<style>
+  .menu {
+    width: 100%;
+    height: 52px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    bottom: 0;
+    border-top: 2px solid var(--primary-light);
+    padding: 8px;
+    background-color: var(--primary-dark);
+  }
+
+  a {
+    font-size: 14px;
+  }
+</style>
