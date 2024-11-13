@@ -1,0 +1,218 @@
+---
+import Image from "astro/components/Image.astro";
+
+import Card from "../components/Card.astro";
+import Email from "../components/Email.svelte";
+
+import Layout from "../layouts/Layout.astro";
+
+import certificate from "../images/certificate.png";
+
+const education = [
+  {
+    year: "2026",
+    institution:
+      "Research Center for Industrial Problems of Development, National Academy of Sciences of Ukraine",
+    level: "Ph.D. (Management)",
+    thesis:
+      "Managing Transformations in Higher Education of Ukraine in Industry 4.0 Environment",
+  },
+  {
+    year: "2024",
+    institution: "Vidzeme University of Applied Sciences",
+    level: "MS (Business Environment Administration)",
+    thesis:
+      "Application of Machine Learning Algorithms for Effort Estimation in Project, Innovation, and Organizational Management",
+  },
+  {
+    year: "2022",
+    institution: "V. N. Karazin Kharkiv National University",
+    level: "M.S. (Cybersecurity)",
+    thesis:
+      "Using Schnorr Signatures to Provide a Secure Communication Channel in a Decentralized Environment",
+  },
+  {
+    year: "2020",
+    institution: "V. N. Karazin Kharkiv National University",
+    level: "B.S. (Cybersecurity)",
+    thesis: "",
+  },
+];
+
+const workExperience = [
+  {
+    timeframe: "Jun 2023 - Jul 2024",
+    company: "Kelp.Digital",
+    position: "Business Development Manager",
+  },
+  {
+    timeframe: "May 2020 - Feb 2023",
+    company: "Distributed Lab",
+    position: "Engineering & Project Manager",
+  },
+  {
+    timeframe: "Jun 2019 - May 2020",
+    company: "Distributed Lab",
+    position: "Research & Business Development Manager",
+  },
+  {
+    timeframe: "Jun 2018 - Aug 2018",
+    company: "LET'S VERIFY",
+    position: "Lead Verification Specialist",
+  },
+];
+
+const activities = [
+  {
+    label: "2022",
+    value:
+      "Mentoring an online course on programming and decentralized technologies",
+  },
+  {
+    label: "2022",
+    value:
+      "Teaching a series of online lectures on blockchain and decentralized technologies",
+  },
+  {
+    label: "2020",
+    value: "Blockchain and Decentralized Technologies Vol. 3 Editor-in-Chief",
+  },
+  {
+    label: "2020",
+    value: "Teaching a 9-week corporate educational course on blockchain",
+  },
+  {
+    label: "2019",
+    value: "Blockchain and Decentralized Technologies Vol. 2 Contributor",
+  },
+];
+
+const certifications = [
+  {
+    year: "2024",
+    institution: "The University of Helsinki",
+    title: "Deep Dive Into Modern Web Development",
+    credentialLink:
+      "https://studies.cs.helsinki.fi/stats/api/certificate/fullstackopen/en/4f4c05136d76235787e3dba543629b70",
+  },
+  {
+    year: "2024",
+    institution: "freeCodeCamp",
+    title: "Responsive Web Design",
+    credentialLink:
+      "https://www.freecodecamp.org/certification/alxwnth/responsive-web-design",
+  },
+  {
+    year: "2023",
+    institution: "Software AG",
+    title: "ARIS Business Process Analysis Platform",
+  },
+  {
+    year: "2023",
+    institution: "William Stewart PhD, PMP, PPM (Udemy)",
+    title: "Deeply Practical Project Management",
+  },
+  {
+    year: "2022",
+    institution: "Rice University (Coursera)",
+    title: "Finance for Non-Finance Professionals",
+  },
+  {
+    year: "2019",
+    institution: "Johns Hopkins University (Coursera)",
+    title: "R Programming",
+  },
+  {
+    year: "2019",
+    institution: "Johns Hopkins University (Coursera)",
+    title: "The Data Scientist's Toolbox",
+  },
+];
+---
+
+<Layout>
+  <Card title="cv" class="full">
+    <h1>curriculum vitae</h1>
+    <time>
+      <br />
+      <p>Updated November 13, 2024.</p>
+    </time>
+  </Card>
+  <Card title="contact_information">
+    <p>Alex Shapoval</p>
+    <p>Email: <Email client:load /></p>
+  </Card>
+  <Card title="employment" class="wide">
+    {
+      workExperience.map((exp) => (
+        <div>
+          <p>{exp.timeframe}</p>
+          <p>
+            <em>{exp.company}</em>
+          </p>
+          <p>{exp.position}</p>
+        </div>
+      ))
+    }
+  </Card>
+  <Card title="education" class="full">
+    {
+      education.map((edu) => (
+        <div>
+          <p>{edu.year}</p>
+          <p>
+            <em>{edu.institution}</em>
+          </p>
+          <p>{edu.level}</p>
+          <p>{edu.thesis}</p>
+        </div>
+      ))
+    }
+  </Card>
+  <Card title="activities" class="full">
+    {
+      activities.map((act) => (
+        <div>
+          <p>{act.label}</p>
+          <p>{act.value}</p>
+        </div>
+      ))
+    }
+  </Card>
+  <Card title="credentials" class="full">
+    <div class="credentials">
+      {
+        certifications.map((cert) => (
+          <div class="credential">
+            <Image src={certificate} alt={cert.title} />
+            <p class="title">{cert.title}</p>
+            <p>
+              <em>{cert.institution}</em>
+            </p>
+            <p>{cert.year}</p>
+          </div>
+        ))
+      }
+    </div>
+  </Card>
+</Layout>
+
+<style>
+  .credentials {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+
+  .credential {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .credential .title {
+    font-size: 1.1rem;
+  }
+</style>

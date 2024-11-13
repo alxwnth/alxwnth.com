@@ -1,0 +1,30 @@
+---
+import Card from "../components/Card.astro";
+import NavLinks from "../components/NavLinks.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <Card title="nav.sh" class="tall">
+    <NavLinks />
+  </Card>
+  <Card title="splash.sh" class="wide">
+    <h1>alex@home:~$</h1>
+  </Card>
+  <Card title="about.sh" class="wide">
+    swe, researcher (EdTech, AIEd, Education 4.0). current interests include
+    (but not limited to): messing with computers, learning languages, spending
+    time in nature</Card
+  >
+</Layout>
+
+<style>
+  h1 {
+    font-family: "CloisterBlack", serif;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+  }
+</style>

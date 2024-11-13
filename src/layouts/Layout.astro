@@ -1,0 +1,222 @@
+---
+import Waves from "../components/Waves.astro";
+import StartMenu from "../components/StartMenu.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>alxwnth</title>
+  </head>
+  <body>
+    <main>
+      <div class="container bento">
+        <slot />
+      </div>
+    </main>
+    <StartMenu />
+    <Waves />
+  </body>
+</html>
+
+<style is:global>
+  @font-face {
+    font-family: "Courier New";
+    src: url("/fonts/CourierNew.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "CloisterBlack";
+    src: url("/fonts/CloisterBlack.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Alagard";
+    src: url("/fonts/alagard.ttf") format("truetype");
+  }
+
+  :root {
+    --primary-light: #f5deb3;
+    --primary-dark: #312727;
+    --primary-darker: #241c1c;
+  }
+
+  html {
+    font-family: "Alagard", sans-serif;
+    font-weight: normal;
+    background: var(--primary-dark);
+    color: var(--primary-light);
+  }
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+
+  a {
+    color: var(--primary-light);
+  }
+
+  main {
+    padding-bottom: 52px;
+  }
+
+  button {
+    font-family: "Alagard", sans-serif;
+    font-size: 1rem;
+    color: var(--primary-light);
+    background-color: var(--primary-dark);
+    border: none;
+    border-color: var(--primary-light) var(--primary-darker)
+      var(--primary-darker) var(--primary-light);
+  }
+
+  .button {
+    display: block;
+    text-decoration: none;
+    padding: 8px;
+    background: var(--bg-color);
+    border: 2px solid;
+    border-color: var(--primary-light) var(--primary-darker)
+      var(--primary-darker) var(--primary-light);
+  }
+
+  .button:active {
+    border-color: var(--border-darker) var(--border-light) var(--border-light)
+      var(--border-darker);
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
+
+  a:hover,
+  button:hover {
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+    text-decoration: none;
+  }
+
+  .cv-table-spec {
+    width: 18ex;
+  }
+
+  table td,
+  table td * {
+    vertical-align: baseline;
+  }
+
+  td {
+    padding-bottom: 10px;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  pre {
+    position: fixed;
+    font-family: "Courier New", Courier, monospace;
+    opacity: 0.5;
+    top: -50px;
+    left: -140px;
+    font-size: 9px;
+    z-index: -1;
+    line-height: 1.1;
+    letter-spacing: -0.3pt;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .container {
+    margin: 0 auto;
+    padding: 2rem;
+    max-width: 726px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .bento {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .card.large {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .card.wide {
+    grid-column: span 2;
+  }
+
+  .card.full {
+    grid-column: span 3;
+  }
+
+  .card.tall {
+    grid-row: span 2;
+  }
+
+  @media screen and (max-width: 1400px) {
+    pre {
+      left: -540px;
+    }
+  }
+
+  @media screen and (max-width: 1300px) {
+    pre {
+      left: -640px;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    pre {
+      left: -740px;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    pre {
+      left: -860px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    pre {
+      top: 150px;
+      left: -640px;
+      font-size: 7px;
+      letter-spacing: -0.4pt;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    pre {
+      left: -700px;
+    }
+  }
+
+  @media screen and (max-width: 300px) {
+    pre {
+      font-size: 6px;
+      left: -560px;
+      letter-spacing: -0.5pt;
+    }
+  }
+</style>

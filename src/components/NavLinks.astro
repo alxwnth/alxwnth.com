@@ -1,0 +1,54 @@
+---
+import Image from "astro/components/Image.astro";
+
+import briefcase from "../images/briefcase.png";
+import directory from "../images/directory.png";
+import envelope from "../images/envelope.png";
+import help from "../images/help.png";
+import program from "../images/program.png";
+import users from "../images/users.png";
+
+const links = [
+  { icon: directory, href: "/cv", text: "cv" },
+  { icon: help, href: "/about", text: "about" },
+  { icon: envelope, href: "/contact", text: "contact" },
+  { icon: briefcase, href: "/projects", text: "projects" },
+  { icon: program, href: "https://github.com/alxwnth", text: "github" },
+  // { icon: users, href: "https://x.com/alxwnth", text: "xitter" },
+  { icon: users, href: "https://orcid.org/0000-0003-4478-3193", text: "orcid" },
+];
+---
+
+<ul class="nav-list">
+  {
+    links.map((item) => (
+      <li>
+        <a href={item.href}>
+          <Image src={item.icon} alt={item.text} />
+          {item.text}
+        </a>
+      </li>
+    ))
+  }
+</ul>
+
+<style>
+  .nav-list {
+    list-style: none;
+  }
+
+  .nav-list img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .nav-list li a {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .nav-list li:not(:last-child) {
+    margin-bottom: 12px;
+  }
+</style>

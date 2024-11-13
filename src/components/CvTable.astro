@@ -1,0 +1,25 @@
+---
+interface Props {
+  links: { label: string; value: string }[];
+}
+
+const { links } = Astro.props;
+---
+
+<table class="cv-table">
+  <colgroup> <col class="cv-table-spec" /></colgroup>
+  <col class="cv-table-content" />
+  <tbody>
+    {
+      links.map((detail) => (
+        <tr>
+          <td>{detail.label}</td>
+          <td>
+            {/* TODO: Do this properly later */}
+            <Fragment set:html={detail.value} />
+          </td>
+        </tr>
+      ))
+    }
+  </tbody>
+</table>
